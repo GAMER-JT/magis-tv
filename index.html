@@ -1,0 +1,144 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeroflow-IA - Magis tv</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Aeroflow-IA</div>
+    <div class="nav-links">
+      <a href="#features">Características</a>
+      <a href="#preview">Vista Previa</a>
+      <a href="#download">Descargar</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div class="hero">
+        <h1>Aeroflow-IA</h1>
+        <p class="tagline">Magis tv</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn-primary mobile-download-btn" data-version="mobile">
+            <i class="fas fa-mobile-alt"></i> Comprar versión móvil - $15.00
+          </a>
+          <a href="#" class="btn-primary tv-download-btn" data-version="tv">
+            <i class="fas fa-tv"></i> Comprar versión Smart TV - $15.00
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="preview" class="preview-section">
+    <div class="device-mockup">
+      <div class="phone">
+        <div class="screen">
+          <img src="Screenshot_20250203_201634_MAGIS.jpg" alt="MAGIS TV App Interface" class="app-screenshot">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <h2>Características</h2>
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-up">
+        <i class="fas fa-tv"></i>
+        <h3>Pantallas</h3>
+        <p>Versión 5.8.1: 4 pantallas</p>
+        <p>Versión 4.29.2: 2 pantallas</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Versión móvil y smartv</h3>
+        <p>Disponible en ambas versiones</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-headset"></i>
+        <h3>Soporte Técnico</h3>
+        <p>Disponible en ambas versiones</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-play-circle"></i>
+        <h3>Sin Pausas ni Congelamiento</h3>
+        <p>Versión 5.8.1: ✓</p>
+        <p>Versión 4.29.2: ✗</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-ban"></i>
+        <h3>Sin Publicidad</h3>
+        <p>Versión 5.8.1: ✓</p>
+        <p>Versión 4.29.2: ✗</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Aeroflow-IA</div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p>&copy; 2025 Aeroflow-IA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="payment-modal mobile-payment-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Cerrar modal"></button>
+      <h3>Detalles de Pago - Versión Móvil</h3>
+      <div class="payment-details">
+        <div class="bank-info">
+          <p><strong>Banco:</strong> Banco Nacional</p>
+          <p><strong>Tipo de Cuenta:</strong> Cuenta de Ahorro</p>
+          <p><strong>Número de Cuenta:</strong> 1234-5678-9012-3456</p>
+          <p><strong>Titular:</strong> Aeroflow-IA Inc.</p>
+          <p><strong>Monto:</strong> $15.00 USD</p>
+        </div>
+        <div class="proof-upload">
+          <p>Por favor, adjunta el comprobante de tu pago:</p>
+          <label class="upload-btn">
+            <input type="file" id="mobilePaymentProof" accept="image/*" required>
+            <i class="fas fa-upload"></i> Subir Comprobante
+          </label>
+        </div>
+        <button class="btn-primary" id="confirmMobilePayment">Confirmar Pago</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-modal tv-payment-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Cerrar modal"></button>
+      <h3>Detalles de Pago - Versión Smart TV</h3>
+      <div class="payment-details">
+        <div class="bank-info">
+          <p><strong>Banco:</strong> Banco Nacional</p>
+          <p><strong>Tipo de Cuenta:</strong> Cuenta de Ahorro</p>
+          <p><strong>Número de Cuenta:</strong> 1234-5678-9012-3456</p>
+          <p><strong>Titular:</strong> Aeroflow-IA Inc.</p>
+          <p><strong>Monto:</strong> $15.00 USD</p>
+        </div>
+        <div class="proof-upload">
+          <p>Por favor, adjunta el comprobante de tu pago:</p>
+          <label class="upload-btn">
+            <input type="file" id="tvPaymentProof" accept="image/*" required>
+            <i class="fas fa-upload"></i> Subir Comprobante
+          </label>
+        </div>
+        <button class="btn-primary" id="confirmTvPayment">Confirmar Pago</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
