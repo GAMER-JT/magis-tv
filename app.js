@@ -155,12 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Unique download URLs and file names for mobile and TV versions
   const DOWNLOAD_CONFIG = {
     mobile: {
-      url: 'https://aeroflow-ia.com/downloads/AeroflowIA_Mobile_v5.8.1.apk',
-      fileName: 'AeroflowIA_Mobile_v5.8.1.apk'
+      url: 'https://download2298.mediafire.com/91dwuzx6skzgOFTJV1kqHdWXHn3rEQH0Qc6ge_W9LMpA68KiRiKqGC-h-LdkUeePS7-f9bqd0l3uMWCu_PgvyezxIGHvqzy2JQaaW4X-hWfCJVtFZGwhXLkKe0IAIow3NOeztuItkaAqwIdoboVpMBU74ysrWDNxa4jRVnLTckSTM-MJ/ws4dsca636evyim/magis-celular.apk',
+      fileName: 'magis-celular.apk'
     },
     tv: {
-      url: 'https://aeroflow-ia.com/downloads/AeroflowIA_SmartTV_v5.8.1.apk',
-      fileName: 'AeroflowIA_SmartTV_v5.8.1.apk'
+      url: 'https://download2366.mediafire.com/bpoiduy50kpgmSt3AHD7EWb60U05nWWO3Mn7ADidunnYJ5Sme3Y_6qfCbNk713zvjwKBFz-7Bnb78FON5yb8VJS9GuJP9x0m8idW2zsonXNtddJOunz7eApvF2VUVdpBIxpp1pLsDMX-wP5ArMirg4fS4QA6_Rc2hINZqzkSBodo3iBp/dihhupk7nv2g27z/magis-video.apk',
+      fileName: 'magis-video.apk'
     }
   };
 
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await handlePaymentConfirmation(confirmTvPaymentBtn, tvPaymentModal, DOWNLOAD_CONFIG.tv);
   });
 
-  // Common payment confirmation handler
+  // Modify the download handling to open URL directly
   async function handlePaymentConfirmation(confirmBtn, modal, downloadConfig) {
     // Show loading state
     confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
@@ -237,15 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
     startConfetti();
     showSuccessMessage();
 
-    // Start download after delay
+    // Directly open the download URL in the same window
     setTimeout(() => {
-      // Create a temporary link and trigger download
-      const downloadLink = document.createElement('a');
-      downloadLink.href = downloadConfig.url;
-      downloadLink.download = downloadConfig.fileName;
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+      window.open(downloadConfig.url, '_blank');
       
       showDownloadStartedMessage();
     }, 1500);
